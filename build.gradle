@@ -34,7 +34,19 @@ repositories {
 	maven {
 		url "https://maven.springframework.org/release"
 	}
-	jcenter()
+	maven { url "http://repo.maven.apache.org/maven2" }
+	maven {
+		name 'jboss-nexus'
+		url "http://repository.jboss.org/nexus/content/groups/public/"
+	}
+	maven {
+		name 'jahia-public'
+		url "https://devtools.jahia.com/nexus/content/groups/public"
+	}
+	maven {
+		name "jboss-snapshots"
+		url "http://snapshots.jboss.org/maven2/"
+	}
 	mavenCentral()
 }
 
@@ -54,5 +66,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.batch:spring-batch-test'
+	//JDK 1.8+ needs external dependency
+	runtime group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+	runtime group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0'
+	runtime group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.0'
+	runtime group: 'javax.activation', name: 'activation', version: '1.1.1'
 	compile "ch.qos.logback:logback-classic"
+	compile("com.oracle.jdbc:ojdbc7:12.1.0.2")
 }

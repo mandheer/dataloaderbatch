@@ -19,6 +19,15 @@ public class OutputFormatData {
     private String ibmSpamProbVal;
     private String ibmNotSpamProbVal;
 
+    public OutputFormatData(){
+
+    }
+
+    public OutputFormatData(String msgId, String phone){
+        this.msgId = msgId;
+        this.phone = phone;
+    }
+
     public String getMsgId() {
         return msgId;
     }

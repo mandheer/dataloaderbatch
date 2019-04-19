@@ -1,7 +1,7 @@
 package in.pabreja.exercise.industrybuying.dataloaderbatch.validation;
 
-import in.pabreja.exercise.industrybuying.dataloaderbatch.stereotype.IndustryBuyingService;
 import in.pabreja.exercise.industrybuying.dataloaderbatch.model.OutputFormatData;
+import in.pabreja.exercise.industrybuying.dataloaderbatch.stereotype.IndustryBuyingService;
 
 @IndustryBuyingService
 public class OutputDataValidatorImpl implements DataValidator<OutputFormatData> {

@@ -1,19 +1,22 @@
+drop table MESSAGEDATA ;
+select * from messagedata;
+
 CREATE TABLE messagedata(
 
-    m_id NUMBER(5,0),
-    message_str VARCHAR2(255),
-    m_phone NUMBER(10,0),
+    m_id NUMBER(10,0),
+    message_str VARCHAR2(1000),
+    m_phone VARCHAR2(15), -- THIS CAN CONTAIN STRING VALUE SO VARCHAR2 IS USED
     -- p_c_id varchar2(2), --country code for phone
     m_t_val varchar2(8), -- ENUM( 'spam','not-spam') if using enum data type
     m_cube_val varchar2(8),
 
     m_g_val VARCHAR2(8),
-    m_g_sprob NUMBER(6,6),
-    m_g_nsprob NUMBER(6,6),
+    m_g_sprob NUMBER(11,10),
+    m_g_nsprob NUMBER(11,10),
 
     m_ibm_val VARCHAR2(8),
-    m_ibm_sprob NUMBER(6,6),
-    m_ibm_nsprob NUMBER(6,6),
+    m_ibm_sprob NUMBER(11,10),
+    m_ibm_nsprob NUMBER(11,10),
     
     m_l_id varchar2(100), -- this will hold list of litrals in table for faster searching.
 

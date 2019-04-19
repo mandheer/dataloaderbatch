@@ -47,8 +47,8 @@ public class InputDataValidatorImpl implements DataValidator<InputFormatData> {
         return true;*/
         return CommonUtil.checkTruthVal(item.getIbTruthVal()) &&
                 CommonUtil.checkTruthVal(item.getCubeTruthVal()) &&
-                CommonUtil.checkTruthVal(item.getgTruthVal()) && CommonUtil.checkProbability(item.getgSpamProbVal(),item.getgNotSpamProbVal()) &&
-                CommonUtil.checkTruthVal(item.getIbmTruthVal()) && CommonUtil.checkProbability(item.getIbmSpamProbVal(),item.getIbmNotSpamProbVal()) &&
-                CommonUtil.isPhone(item.getPhone());
+                CommonUtil.checkTruthVal(item.getgTruthVal()) && /*CommonUtil.checkProbability(item.getgSpamProbVal(),item.getgNotSpamProbVal()) &&*/
+                CommonUtil.checkTruthVal(item.getIbmTruthVal()) //&& /*CommonUtil.checkProbability(item.getIbmSpamProbVal(),item.getIbmNotSpamProbVal()) &&*/
+                /*CommonUtil.isPhone(item.getPhone())*/;
     }
 }

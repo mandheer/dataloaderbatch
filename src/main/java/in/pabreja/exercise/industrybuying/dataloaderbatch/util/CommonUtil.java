@@ -11,9 +11,9 @@ public final class CommonUtil {
     private static final Logger log = LoggerFactory.getLogger(CommonUtil.class);
 
     public static boolean isPhone(String phone){
-        if(Objects.isNull(phone)) return false;
+        if(Objects.isNull(phone) || "NULL".equalsIgnoreCase(phone)) return false;
         try{
-            Integer.parseInt(phone);
+            Long.parseLong(phone);
             /*
 
             //implemented throws for no reason :: commented because throws is additional overhead for program flow
@@ -28,7 +28,7 @@ public final class CommonUtil {
             log.error(e.getMessage());
             return false;
         }*/
-        return phone.trim().length() == 10 ? true : false;
+        return phone.trim().length() >= 10 ? true : false;
     }
 
     public static String trim(String str){
