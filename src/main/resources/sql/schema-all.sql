@@ -4,7 +4,7 @@ select * from messagedata;
 CREATE TABLE messagedata(
 
     m_id NUMBER(10,0),
-    message_str varchar2(2500),
+    message_str varchar2(4000),
     m_phone VARCHAR2(25), -- THIS CAN CONTAIN STRING VALUE SO VARCHAR2 IS USED, len 25 as it's actual value, no message is skipped
     -- p_c_id varchar2(2), --country code for phone
     m_t_val varchar2(8), -- ENUM( 'spam','not-spam') if using enum data type
